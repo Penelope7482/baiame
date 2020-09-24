@@ -1,6 +1,6 @@
 <template>
 <div id="carouselIcon">
-    <div v-for="(massage, index) in massages" :key="massage" :id="massage.massageName" >  
+    <div v-for="(massage, index) in massages" :key="massage" :id="massage.massageName">  
         <p><b>Composant carouselIcone numéro: {{ index }}</b></p>
         <h1>{{massage.titre}}</h1>
         <div class="description" v-html="massage.description"></div>

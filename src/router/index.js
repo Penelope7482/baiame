@@ -6,6 +6,7 @@ import Massage from '../views/Massage.vue'
 Vue.use(VueRouter)
 
 const routes = [
+
     {
         path: '/',
         name: 'Accueil',
@@ -41,6 +42,7 @@ const routes = [
         name: 'Infos Pratiques',
         component: Home
     },
+
 ]
 
 const router = new VueRouter({

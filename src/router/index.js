@@ -1,47 +1,53 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Home from '../views/Home.vue'
-import Massage from '../views/Massage.vue'
+import Home from '../views/Home.vue'
+import Massages from '../views/Massages.vue'
+import Masseuse from '../views/Masseuse.vue'
+import Stages from '../views/Stages.vue'
+import Entreprises from '../views/Entreprises.vue'
+import Infos from '../views/Infos.vue'
+import RandoMassages from '../views/RandoMassages.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
 
-    // {
-    //     path: '/',
-    //     name: 'Accueil',
-    //     component: Home0
-    // },
-    // {
-    //     path: '/votre_masseuse',
-    //     name: 'Votre Masseuse',
-    //     component: Home1
-    // },
+    {
+        path: '/',
+        name: 'Accueil',
+        component: Home
+    },
+    {
+        path: '/votre_masseuse',
+        name: 'Votre Masseuse',
+        component: Masseuse
+    },
     {
         path: '/massages',
-        name: 'Massage',
-        component: Massage
+        name: 'Massages',
+        component: Massages
     },
-    // {
-    //     path: '/stages',
-    //     name: 'Stages',
-    //     component: Home2
-    // },
-    // {
-    //     path: '/entreprises',
-    //     name: 'Entreprises',
-    //     component: Home3
-    // },
-    // {
-    //     path: '/rando_massages',
-    //     name: 'Rando Massages',
-    //     component: Home4
-    // },
-    // {
-    //     path: '/infos_pratiques',
-    //     name: 'Infos Pratiques',
-    //     component: Home5
-    // },
+    {
+        path: '/stages',
+        name: 'Stages',
+        component: Stages
+    },
+    {
+        path: '/entreprises',
+        name: 'Entreprises',
+        component: Entreprises
+    },
+    {
+        path: '/rando_massages',
+        name: 'Rando Massages',
+        component: RandoMassages
+    },
+    {
+        path: '/infos_pratiques',
+        name: 'Infos Pratiques',
+        component: Infos
+    },
 
 ]
 

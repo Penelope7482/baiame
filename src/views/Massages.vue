@@ -1,5 +1,5 @@
 <template>
-    <div id="Massage">
+    <div id="Massages">
         <p>Ceci est la page massage</p>
       <Carousel/>
     </div>
@@ -8,7 +8,7 @@
 <script>
 import Carousel from '@/components/Carousel.vue'
 export default {
-    name: "Massage",
+    name: "Massages",
     components: {
         Carousel
     }

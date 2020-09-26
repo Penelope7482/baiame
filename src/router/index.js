@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
+import Massage from '../views/Massage.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+
     {
         path: '/',
         name: 'Accueil',
@@ -40,6 +42,7 @@ const routes = [
         name: 'Infos Pratiques',
         component: Home
     },
+
 ]
 
 const router = new VueRouter({

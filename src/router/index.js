@@ -7,7 +7,8 @@ import Stages from '../views/Stages.vue'
 import Entreprises from '../views/Entreprises.vue'
 import Infos from '../views/Infos.vue'
 import RandoMassages from '../views/RandoMassages.vue'
-
+import LoginComponent from "../views/Login.vue"
+import SecureComponent from "../views/Secure.vue"
 
 Vue.use(VueRouter)
 
@@ -48,6 +49,16 @@ const routes = [
         name: 'Infos Pratiques',
         component: Infos
     },
+    {
+        path: "/login",
+        name: "Login",
+        component: LoginComponent
+    },
+    {
+        path: "/secure",
+        name: "Secure",
+        component: SecureComponent
+    }
 
 ]
 

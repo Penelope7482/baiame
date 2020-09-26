@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1402 604" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:60;">
+	<g>
+		<g>
+			<path d="M711.25,59.136c0,0 -121.283,254.695 -121.283,363.849c0,66.938 54.345,121.283 121.283,121.283c66.938,0 121.283,-54.345 121.283,-121.283c0,-109.154 -121.283,-363.849 -121.283,-363.849Z" style="fill:none;stroke:#685d4e;stroke-width:29.17px;" />
+			<path d="M573.836,301.702l274.828,0" style="fill:none;stroke:#685d4e;stroke-width:29.17px;" />
+			<path d="M545.414,180.419c0,-91.527 74.309,-165.836 165.836,-165.836c91.527,0 165.836,74.309 165.836,165.836" style="fill:none;stroke:#685d4e;stroke-width:29.17px;" />
+			<path d="M877.086,422.985c0,91.528 -74.309,165.836 -165.836,165.836c-91.527,0 -165.836,-74.308 -165.836,-165.836" style="fill:none;stroke:#685d4e;stroke-width:29.17px;" />
+		</g>
+		<text x="-30.364px" y="436.372px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:336.142px;fill:#717171;">
+			B
+			<tspan x="175.381px 435.125px " y="436.372px 436.372px ">
+				AI
+			</tspan>
+		</text>
+		<text x="897.249px" y="432.105px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:336.142px;fill:#717171;">
+			M
+			<tspan x="1231.18px " y="432.105px ">
+				E
+			</tspan>
+		</text>
+		<text x="982.427px" y="529.808px" style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:78.288px;fill:#353535;">
+			M
+			<tspan x="1056.96px 1112.7px 1156.7px 1200.69px 1254.79px 1314.76px 1362.75px " y="529.808px 529.808px 529.808px 529.808px 529.808px 529.808px 529.808px ">
+				ASSAGES
+			</tspan>
+		</text>
+	</g>
+</svg>

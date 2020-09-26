@@ -3,7 +3,7 @@
     <div :id="stage.stageName">
        <h1>{{stage.titre}}</h1> 
         <div class="stageDescription" >
-            {{stage.image}} <br>
+            <img :src="'../assets/img/' + stage.image" :alt="stage.stageName"> <br>
             {{stage.objectif1}} <br>
             {{stage.objectif2}} <br>
             {{stage.objectif3}} <br>

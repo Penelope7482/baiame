@@ -1,22 +1,20 @@
 <template>
     <div>
-        <p>ceci est le composant carousel </p>
-        <p>Voilà les CarouselIcones </p>      
-        <CarouselIcone />       
+        <p>ceci est le composant carousel </p>   
+        <CarouselIcone  v-for="(massage, index) in massages" :key="index" :massage="massage"/>       
     </div>
 </template>
 
 
 <script>
 import CarouselIcone from '@/components/CarouselIcone.vue'
-
+import json from "../assets/data.json";
 export default {
     name: "Carousel",
-    // props: ['titre', 'description', 'massageName'],
     data () {
 
         return {
-            msg: 'test'
+            massages : json.massages
         }
     },
     components : {

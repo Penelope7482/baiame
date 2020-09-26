@@ -9,31 +9,42 @@
       xmlns:xlink="http://www.w3.org/1999/xlink"
       xml:space="preserve"
       xmlns:serif="http://www.serif.com/"
-      style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:60;"
+      style="
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 60;
+      "
     >
       <g>
         <g>
           <path
             d="M711.25,59.136c0,0 -121.283,254.695 -121.283,363.849c0,66.938 54.345,121.283 121.283,121.283c66.938,0 121.283,-54.345 121.283,-121.283c0,-109.154 -121.283,-363.849 -121.283,-363.849Z"
-            style="fill:none;stroke:#685d4e;stroke-width:29.17px;"
+            style="fill: none; stroke: #685d4e; stroke-width: 29.17px"
           />
           <path
             d="M573.836,301.702l274.828,0"
-            style="fill:none;stroke:#685d4e;stroke-width:29.17px;"
+            style="fill: none; stroke: #685d4e; stroke-width: 29.17px"
           />
           <path
             d="M545.414,180.419c0,-91.527 74.309,-165.836 165.836,-165.836c91.527,0 165.836,74.309 165.836,165.836"
-            style="fill:none;stroke:#685d4e;stroke-width:29.17px;"
+            style="fill: none; stroke: #685d4e; stroke-width: 29.17px"
           />
           <path
             d="M877.086,422.985c0,91.528 -74.309,165.836 -165.836,165.836c-91.527,0 -165.836,-74.308 -165.836,-165.836"
-            style="fill:none;stroke:#685d4e;stroke-width:29.17px;"
+            style="fill: none; stroke: #685d4e; stroke-width: 29.17px"
           />
         </g>
         <text
           x="-30.364px"
           y="436.372px"
-          style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:336.142px;fill:#717171;"
+          style="
+            font-family: 'Futura-Medium', 'Futura', sans-serif;
+            font-weight: 500;
+            font-size: 336.142px;
+            fill: #717171;
+          "
         >
           B
           <tspan x="175.381px 435.125px " y="436.372px 436.372px ">AI</tspan>
@@ -41,7 +52,12 @@
         <text
           x="897.249px"
           y="432.105px"
-          style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:336.142px;fill:#717171;"
+          style="
+            font-family: 'Futura-Medium', 'Futura', sans-serif;
+            font-weight: 500;
+            font-size: 336.142px;
+            fill: #717171;
+          "
         >
           M
           <tspan x="1231.18px " y="432.105px ">E</tspan>
@@ -49,13 +65,19 @@
         <text
           x="982.427px"
           y="529.808px"
-          style="font-family:'Lato-Regular', 'Lato', sans-serif;font-size:78.288px;fill:#353535;"
+          style="
+            font-family: 'Lato-Regular', 'Lato', sans-serif;
+            font-size: 78.288px;
+            fill: #353535;
+          "
         >
           M
           <tspan
             x="1056.96px 1112.7px 1156.7px 1200.69px 1254.79px 1314.76px 1362.75px "
             y="529.808px 529.808px 529.808px 529.808px 529.808px 529.808px 529.808px "
-          >ASSAGES</tspan>
+          >
+            ASSAGES
+          </tspan>
         </text>
       </g>
     </svg>
@@ -68,8 +90,10 @@
               class="li_nav"
               v-for="item in items"
               :key="item.name"
-              :to="{name: item.name}"
-            >{{item.name}}</router-link>
+              :to="{ name: item.name }"
+              :id="item.id"
+              >{{ item.name }}</router-link
+            >
           </ul>
           <div id="nav_wrap">
             <div id="infos">
@@ -84,9 +108,15 @@
             </div>
             <div id="link_infos">
               <div>
-                <router-link class="li_nav" to="/infos_pratiques">Tarifs</router-link>
-                <router-link class="li_nav" to="/infos_pratiques">Bons cadeaux</router-link>
-                <router-link class="li_nav" to="/infos_pratiques">Programme de fidélite</router-link>
+                <router-link class="li_nav" to="/infos_pratiques"
+                  >Tarifs</router-link
+                >
+                <router-link class="li_nav" to="/infos_pratiques"
+                  >Bons cadeaux</router-link
+                >
+                <router-link class="li_nav" to="/infos_pratiques"
+                  >Programme de fidélite</router-link
+                >
               </div>
             </div>
           </div>
@@ -101,13 +131,13 @@ export default {
   name: "Navbar",
   mounted() {
     $(window).on("scroll", () => {
-      if (window.scrollY > 120) {
-        $(".navbar").css({ height: "150px" });
+      if (window.scrollY > 50) {
+        $(".navbar").css({ height: "115px" });
         $("svg").css({ display: "none" });
         $("nav").css({ width: "80%" });
         $(".navbar img").css({ display: "inline" });
       }
-      if (window.scrollY < 120) {
+      if (window.scrollY < 50) {
         $(".navbar").css({ height: "200px" });
         $("nav").css({ width: "100%" });
         $(".navbar img").css({ display: "none" });
@@ -127,13 +157,13 @@ export default {
   data: () => {
     return {
       items: [
-        { name: "Accueil" },
-        { name: "Votre Masseuse" },
-        { name: "Massages" },
-        { name: "Stages" },
-        { name: "Entreprises" },
-        { name: "Rando Massages" },
-        { name: "Infos Pratiques" },
+        { name: "Accueil", id: "acceuil" },
+        { name: "Votre Masseuse", id: "votre_masseuse" },
+        { name: "Massages", id: "massages" },
+        { name: "Stages", id: "stages" },
+        { name: "Entreprises", id: "entreprises" },
+        { name: "Rando Massages", id: "rando_massages" },
+        { name: "Infos Pratiques", id: "infos_pratiques" },
       ],
     };
   },

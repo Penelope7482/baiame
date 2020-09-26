@@ -7,41 +7,41 @@ Vue.use(VueRouter)
 
 const routes = [
 
-    {
-        path: '/',
-        name: 'Accueil',
-        component: Home
-    },
-    {
-        path: '/votre_masseuse',
-        name: 'Votre Masseuse',
-        component: Home
-    },
+    // {
+    //     path: '/',
+    //     name: 'Accueil',
+    //     component: Home0
+    // },
+    // {
+    //     path: '/votre_masseuse',
+    //     name: 'Votre Masseuse',
+    //     component: Home1
+    // },
     {
         path: '/massages',
-        name: 'Massages',
-        component: Home
+        name: 'Massage',
+        component: Massage
     },
-    {
-        path: '/stages',
-        name: 'Stages',
-        component: Home
-    },
-    {
-        path: '/entreprises',
-        name: 'Entreprises',
-        component: Home
-    },
-    {
-        path: '/rando_massages',
-        name: 'Rando Massages',
-        component: Home
-    },
-    {
-        path: '/infos_pratiques',
-        name: 'Infos Pratiques',
-        component: Home
-    },
+    // {
+    //     path: '/stages',
+    //     name: 'Stages',
+    //     component: Home2
+    // },
+    // {
+    //     path: '/entreprises',
+    //     name: 'Entreprises',
+    //     component: Home3
+    // },
+    // {
+    //     path: '/rando_massages',
+    //     name: 'Rando Massages',
+    //     component: Home4
+    // },
+    // {
+    //     path: '/infos_pratiques',
+    //     name: 'Infos Pratiques',
+    //     component: Home5
+    // },
 
 ]
 

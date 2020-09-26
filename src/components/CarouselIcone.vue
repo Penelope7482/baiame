@@ -1,6 +1,6 @@
 <template>
 
-    <div :id="massage.massageName" >
+    <div :id="massage.massageName" class="massageIcone">
        <h1>{{massage.titre}}</h1> 
        <img :src="'../assets/img/' + massage.image" class="image" :alt="massage.massageName" />
         <div class="description" v-html="massage.description"></div>      
@@ -19,3 +19,11 @@ export default {
 };
 
 </script> 
+
+
+<style lang="scss" scoped>
+
+.massageIcone {
+   padding: 50px;
+}
+</style>

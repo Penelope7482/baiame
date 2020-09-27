@@ -2,7 +2,8 @@
 
     <div :id="massage.massageName" class="massageIcone">
        <h1>{{massage.titre}}</h1> 
-       <img :src="'../assets/img/' + massage.image" class="image" :alt="massage.massageName" />
+       <div>
+       <img :src="`static/${massage.image}`" class="image" :alt="massage.massageName" /></div>
         <div class="description" v-html="massage.description"></div>      
     
 </div>
@@ -22,8 +23,12 @@ export default {
 
 
 <style lang="scss" scoped>
-
+@import "@/assets/css/styles.scss";
 .massageIcone {
    padding: 50px;
+}
+img{
+   width: auto;
+   height: 300px;
 }
 </style>

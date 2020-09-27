@@ -16,7 +16,6 @@
 <script>
 import CarouselIcone from "@/components/CarouselIcone.vue";
 import json from "../assets/data.json";
-import "@/assets/img/MassageSenior.jpg";
 import Slick from "vue-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 

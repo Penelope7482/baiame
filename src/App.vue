@@ -2,14 +2,17 @@
   <div id="app">
 
     <Navbar />
-    
+       <router-link
+              v-if="authenticated"
+              to="/secure"
+             
+              >Secure</router-link>
             <router-link
               v-if="authenticated"
               to="/login"
               v-on:click.native="logout()"
               replace
-              >Déconnexion</router-link
-            >
+              >Déconnexion</router-link>
  <router-view @authenticated="setAuthenticated" />
 
   </div>
@@ -29,13 +32,12 @@ export default {
     }
   },
   components: {
-    Navbar,
-  
+    Navbar,  
   },
-  mounted() {  if (!this.authenticated) {
-      this.$router.replace({ name: "Login" });
-    }
-  },
+  // mounted() {  if (!this.authenticated) {
+  //     this.$router.replace({ name: "Login" });
+  //   }
+  // },
    
   methods: {
     setAuthenticated(status) {

@@ -1,30 +1,29 @@
 <template>
-  <div id="carouselIcon">
-    <div v-for="massage in massages" :key="massage.massageName" :id="massage.massageName">
+
+    <div :id="massage.massageName" class="massageIcone">
        <h1>{{massage.titre}}</h1> 
+       <img :src="'../assets/img/' + massage.image" class="image" :alt="massage.massageName" />
         <div class="description" v-html="massage.description"></div>      
-    </div>
-  </div>
+    
+</div>
 </template>
 
 <script>
-import json from "../assets/data.json";
 
 export default {
   name: "CarouselIcone",
-  data() {
-    return {
-      massages : json.massages
-    };
-  },
+  props: ['massage'], 
   mounted() {
-       
-   //   console.log(this.massages)
      return true
   }
 };
-// console.log("test");
 
-// console.log(json.massages);
-// console.log(json.massages[0].massageName);
 </script> 
+
+
+<style lang="scss" scoped>
+
+.massageIcone {
+   padding: 50px;
+}
+</style>

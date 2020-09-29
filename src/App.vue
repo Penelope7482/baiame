@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-
     <Navbar />
-    
-            <router-link
-              v-if="authenticated"
-              to="/login"
-              v-on:click.native="logout()"
-              replace
-              >Déconnexion</router-link
-            >
- <router-view @authenticated="setAuthenticated" />
 
+    <router-link
+      v-if="authenticated"
+      to="/login"
+      v-on:click.native="logout()"
+      replace
+      >Déconnexion</router-link
+    >
+    <router-view @authenticated="setAuthenticated" />
   </div>
 </template>
 
@@ -21,22 +19,22 @@ import Navbar from "@/components/Navbar.vue";
 export default {
   data: () => {
     return {
-     authenticated: false,
+      authenticated: false,
       mockAccount: {
         username: "baiame",
         password: "baiame",
-      }
-    }
+      },
+    };
   },
   components: {
     Navbar,
-  
   },
-  mounted() {  if (!this.authenticated) {
+  mounted() {
+    /* if (!this.authenticated) {
       this.$router.replace({ name: "Login" });
-    }
+    } */
   },
-   
+
   methods: {
     setAuthenticated(status) {
       this.authenticated = status;
@@ -45,7 +43,6 @@ export default {
       this.authenticated = false;
     },
   },
-
 };
 </script>
 
@@ -69,6 +66,7 @@ body {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 a {

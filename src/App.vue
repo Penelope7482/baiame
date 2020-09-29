@@ -1,6 +1,18 @@
 <template>
   <div id="app">
     <Navbar />
+       <router-link
+              v-if="authenticated"
+              to="/secure"
+             
+              >Secure</router-link>
+            <router-link
+              v-if="authenticated"
+              to="/login"
+              v-on:click.native="logout()"
+              replace
+              >Déconnexion</router-link>
+ <router-view @authenticated="setAuthenticated" />
 
     <router-link
       v-if="authenticated"
@@ -27,7 +39,7 @@ export default {
     };
   },
   components: {
-    Navbar,
+    Navbar,  
   },
   mounted() {
     /* if (!this.authenticated) {

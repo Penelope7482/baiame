@@ -17,7 +17,8 @@
                 input: {
                     username: "",
                     password: ""
-                }
+                },
+                // authenticated: "authenticated",
             }
         },
         methods: {

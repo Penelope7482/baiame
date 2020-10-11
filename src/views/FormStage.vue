@@ -1,8 +1,5 @@
-<template >
-<div v-if="authenticated">
-  <div id="secure">
-    <h1>Secure Area</h1>
-    <p>This is a secure area</p>
+<template v-on:load="status()" >
+  <div id="formStage">
 
     <h1>Formulaire de Stages</h1>
     <form action="" method="post">
@@ -63,36 +60,44 @@
       <input type="text" name="participants" id="participants" /><br /><br />
       <label for="tarif">Tarif </label>
       <input type="text" name="tarif" id="tarif" /><br /><br />
+      <input type="submit" value="Enregister la fiche de stage">
     </form>
   </div>
-  </div>
-  <div v-else>Vous n'avez pas accès à cette page</div>
+
 </template>
 
 <script>
 
 export default {
-  name: "Secure",
-  props: ['authenticated'],
-  data() {},
-    mounted() { 
-         if (!this.authenticated) {
-      this.$router.replace({ name: "Login" });
-      console.log("test")  
-         } 
-    //  else {
-    //      this.$router.$authenticated = true
-    //  }
-    },
-
-    methods: {
-    setAuthenticated(status) {
-      this.authenticated = status;
-    },
-      logout() {
-      this.authenticated = false;
+  name: "FormStage",
+  data: () => {
+      return {
+          authenticated : false
       }
-    }
+  },
+  methods : {
+      status() {
+          if (!this.authenticated){
+              this.$router.replace({ name: "Login" });
+          }
+      }
+  }
+//   mounted() {  if (!this.authenticated) {
+//       this.$router.replace({ name: "Login" });
+//     }
+//   },
+    
+//   methods: {
+//     setAuthenticated(status) {
+//       this.authenticated = status;
+//       console.log(status)
+//       return status
+//     },
+//     logout() {
+//       this.authenticated = false;
+//     },
+//   },
+
 };
 </script>
 

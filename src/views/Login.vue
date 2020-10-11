@@ -18,7 +18,7 @@
                     username: "",
                     password: ""
                 },
-                // authenticated: "authenticated",
+                authenticated: false,
             }
         },
         methods: {
@@ -26,7 +26,7 @@
                 if(this.input.username != "" && this.input.password != "") {
                     if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
                         this.$emit("authenticated", true);
-                        this.$router.replace({ name: "Secure" });
+                        this.$router.replace({ name: "FormStage" });
                     } else {
                         console.log("Le mot de passe et / ou l'identifiant est incorrect");
                         alert("Le mot de passe et / ou l'identifiant est incorrect");

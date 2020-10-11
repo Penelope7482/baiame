@@ -58,20 +58,16 @@ const routes = [
         path: "/formstage",
         name: "FormStage",
         component: FormStageComponent,
-        meta: {
-            requiresAuth: true
-          },
-        // beforeEnter: (to, from) => {
-        //       this.FormStage = to.FormStage
-        //         this.FormStage = from.Login
-        // }
+        // meta: {
+        //     requiresAuth: true
+        //   },}
     }
 
 ]
 
 const router = new VueRouter({
     mode: 'history',
-    routes
+        routes
 })
 
 export default router

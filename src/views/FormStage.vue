@@ -75,13 +75,13 @@ export default {
           authenticated : false
       }
   },
-  methods : {
-      status() {
-          if (!this.authenticated){
-              this.$router.replace({ name: "Login" });
-          }
-      }
-  }
+  // methods : {
+  //     status() {
+  //         if (!this.authenticated){
+  //             this.$router.replace({ name: "Login" });
+  //         }
+  //     }
+  // }
 //   mounted() {  if (!this.authenticated) {
 //       this.$router.replace({ name: "Login" });
 //     }

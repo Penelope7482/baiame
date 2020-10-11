@@ -2,16 +2,16 @@
   <div id="app">
     <Navbar />
 
-    <router-link v-if="authenticated" to="/formstage">Formulaire de création de stage</router-link>
+    <!-- <router-link v-if="authenticated" to="/formstage">Formulaire de création de stage</router-link> -->
 
-    <router-link
+    <!-- <router-link
       v-if="authenticated"
       to="/login"
       v-on:click.native="logout()"
       replace
-      >Déconnexion</router-link
-    >
-    <router-view @authenticated="setAuthenticated" />
+      >Déconnexion</router-link > -->
+    <!-- <router-view @authenticated="setAuthenticated" /> -->
+    <router-view />
   </div>
 </template>
 
@@ -19,34 +19,34 @@
 import Navbar from "@/components/Navbar.vue";
 
 export default {
-  data: () => {
-    return {
-      authenticated: false,
-      mockAccount: {
-        username: "baiame",
-        password: "baiame",
-      },
-    };
-  },
+  // data: () => {
+  //   return {
+  //     authenticated: false,
+  //     mockAccount: {
+  //       username: "baiame",
+  //       password: "baiame",
+  //     },
+  //   };
+  // },
   components: {
     Navbar,
   },
-  mounted() {
+  // mounted() {
     /* if (!this.authenticated) {
       this.$router.replace({ name: "Login" });
     } */
-  },
+  // },
 
-  methods: {
-    setAuthenticated(status) {
-      this.authenticated = status;
-      // console.log(status)
-    },
-    logout() {
-      this.authenticated = false;
-    },
-  },
-};
+//   methods: {
+//     setAuthenticated(status) {
+//       this.authenticated = status;
+//       // console.log(status)
+//     },
+//     logout() {
+//       this.authenticated = false;
+//     },
+//   },
+ };
 </script>
 
 <style lang="scss">

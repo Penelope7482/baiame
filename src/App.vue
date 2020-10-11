@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Navbar />
+
     <router-link v-if="authenticated" to="/formstage">Formulaire de création de stage</router-link>
+
     <router-link
       v-if="authenticated"
       to="/login"
@@ -28,6 +30,11 @@ export default {
   },
   components: {
     Navbar,
+  },
+  mounted() {
+    /* if (!this.authenticated) {
+      this.$router.replace({ name: "Login" });
+    } */
   },
 
   methods: {
@@ -62,6 +69,7 @@ body {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 a {

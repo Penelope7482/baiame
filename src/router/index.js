@@ -8,7 +8,7 @@ import Entreprises from '../views/Entreprises.vue'
 import Infos from '../views/Infos.vue'
 import RandoMassages from '../views/RandoMassages.vue'
 import LoginComponent from "../views/Login.vue"
-import SecureComponent from "../views/Secure.vue"
+import FormStageComponent from "../views/FormStage.vue"
 
 Vue.use(VueRouter)
 
@@ -55,9 +55,16 @@ const routes = [
         component: LoginComponent
     },
     {
-        path: "/secure",
-        name: "Secure",
-        component: SecureComponent
+        path: "/formstage",
+        name: "FormStage",
+        component: FormStageComponent,
+        meta: {
+            requiresAuth: true
+          },
+        // beforeEnter: (to, from) => {
+        //       this.FormStage = to.FormStage
+        //         this.FormStage = from.Login
+        // }
     }
 
 ]

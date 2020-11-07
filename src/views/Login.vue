@@ -4,7 +4,7 @@
         <form action="">
         <input type="text" name="username" v-model="input.username" placeholder="Username" />
         <input type="password" name="password" v-model="input.password" placeholder="Password" />
-        <button type="button" v-on:click="login()">Se connecter</button>
+        <button type="button" @click="login()">Se connecter</button>
         </form>
     </div>
 </template>
@@ -25,7 +25,8 @@
             login() {
                 if(this.input.username != "" && this.input.password != "") {
                     if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
-                        this.$emit("authenticated", true);
+                        // this.$emit("authenticated", true);
+                        //  this.$emit('Login::loginResult', {loginResult: true})
                         this.$router.replace({ name: "FormStage" });
                     } else {
                         console.log("Le mot de passe et / ou l'identifiant est incorrect");

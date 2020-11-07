@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>ceci est le composant Stage </p>   
+        <p>{{$t('this is stage component')}}</p>   
         <StageIcone  v-for="(stage, index) in stages" :key="index" :stage="stage"/>       
     </div>
 </template>

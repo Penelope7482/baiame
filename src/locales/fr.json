@@ -1,3 +1,5 @@
 {
-  "message": "hello i18n !!"
+  "message": "hello i18n !!",
+  "stageForm":"Formulaire de Stages",
+  "this is stage component": "ceci est le composant Stage"
 }

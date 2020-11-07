@@ -93,7 +93,7 @@
               :key="item.name"
               :to="{ name: item.name }"
               :id="item.id"
-              >{{ item.name }}</router-link
+              >{{ item.tab }}</router-link
             >
           </ul>
           <div id="nav_wrap" class="flex">
@@ -102,9 +102,9 @@
               <p>9-18h</p>
               <h3>Contact</h3>
               <ul>
-                <li>Tel</li>
-                <li>Mail</li>
-                <li>Adresse</li>
+                <li>Tel: 06 98 33 99 05</li>
+                <li>Mail: baiamemassages@gmail.com</li>
+                <li>Adresse: Les Girards, 05230 Chorges</li>
               </ul>
             </div>
             <div id="link_infos">
@@ -241,13 +241,13 @@ export default {
   data: () => {
     return {
       items: [
-        { name: "Accueil", id: "acceuil" },
-        { name: "Votre Masseuse", id: "votre_masseuse" },
-        { name: "Massages", id: "massages" },
-        { name: "Stages", id: "stages" },
-        { name: "Entreprises", id: "entreprises" },
-        { name: "Rando Massages", id: "rando_massages" },
-        { name: "Infos Pratiques", id: "infos_pratiques" },
+        { name: "Accueil", tab: "Accueil", id: "acceuil" },
+        { name: "Masseuse", tab: "Votre Masseuse", id: "votre_masseuse" },
+        { name: "Massages", tab: "Massages", id: "massages" },
+        { name: "Stages", tab: "Stages", id: "stages" },
+        { name: "Entreprises", tab: "Entreprises", id: "entreprises" },
+        { name: "RandoMassages", tab: "Rando Massages", id: "rando_massages" },
+        { name: "InfosPratiques", tab: "Infos Pratiques", id: "infos_pratiques" },
       ],
     };
   },

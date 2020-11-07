@@ -21,7 +21,7 @@ const routes = [
     },
     {
         path: '/votre_masseuse',
-        name: 'Votre Masseuse',
+        name: 'Masseuse',
         component: Masseuse
     },
     {
@@ -41,12 +41,12 @@ const routes = [
     },
     {
         path: '/rando_massages',
-        name: 'Rando Massages',
+        name: 'RandoMassages',
         component: RandoMassages
     },
     {
         path: '/infos_pratiques',
-        name: 'Infos Pratiques',
+        name: 'InfosPratiques',
         component: Infos
     },
     {

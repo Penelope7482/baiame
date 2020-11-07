@@ -1,6 +1,9 @@
 <template>
     <div id="home">
-        <p>Ceci est la page Accueil</p>
+        <h1>{{$t('Welcome on Baiame')}}</h1>
+
+        <p>{{$t('Want a sweet moment ?')}}</p>
+
     </div>
 </template>
 

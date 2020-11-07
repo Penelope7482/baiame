@@ -60,9 +60,8 @@ const routes = [
         component: FormStageComponent,
         // meta: {
         //     requiresAuth: true
-        //   },}
+        //   },
     }
-
 ]
 
 const router = new VueRouter({

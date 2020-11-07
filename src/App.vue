@@ -19,33 +19,18 @@
 import Navbar from "@/components/Navbar.vue";
 
 export default {
-  // data: () => {
-  //   return {
-  //     authenticated: false,
-  //     mockAccount: {
-  //       username: "baiame",
-  //       password: "baiame",
-  //     },
-  //   };
-  // },
+  data: () => {
+    return {
+      authenticated: false,
+      mockAccount: {
+        username: "baiame",
+        password: "baiame",
+      },
+    };
+  },
   components: {
     Navbar,
   },
-  // mounted() {
-    /* if (!this.authenticated) {
-      this.$router.replace({ name: "Login" });
-    } */
-  // },
-
-//   methods: {
-//     setAuthenticated(status) {
-//       this.authenticated = status;
-//       // console.log(status)
-//     },
-//     logout() {
-//       this.authenticated = false;
-//     },
-//   },
  };
 </script>
 

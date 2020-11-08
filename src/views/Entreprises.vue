@@ -3,7 +3,7 @@
         <h1>{{$t('What if we thought about well-being at work?')}}</h1>
         <figure>
             <img src="../../public/static/TeamBuildingPageEntreprises.jpg" alt="Sessions d'initiation collection au massage">
-        <figcaption>{{$t('Collection initiation sessions in massage')}}</figcaption>
+        <figcaption>{{$t('Collective initiation sessions in massage')}}</figcaption>
         </figure>
         <figure>
             <img src="../../public/static/MassagesAmmaAssis.jpg" alt="Massages Amma assis">

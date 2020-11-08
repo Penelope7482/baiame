@@ -9,64 +9,76 @@ import Infos from '../views/Infos.vue'
 import RandoMassages from '../views/RandoMassages.vue'
 import LoginComponent from "../views/Login.vue"
 import FormStageComponent from "../views/FormStage.vue"
+import i18n from "../i18n"
 
 Vue.use(VueRouter)
 
 const routes = [
-
     {
         path: '/',
-        name: 'Accueil',
-        component: Home
+        redirect: `/${i18n.locale}`,
     },
     {
-        path: '/votre_masseuse',
-        name: 'Masseuse',
-        component: Masseuse
-    },
-    {
-        path: '/massages',
-        name: 'Massages',
-        component: Massages
-    },
-    {
-        path: '/stages',
-        name: 'Stages',
-        component: Stages
-    },
-    {
-        path: '/entreprises',
-        name: 'Entreprises',
-        component: Entreprises
-    },
-    {
-        path: '/rando_massages',
-        name: 'RandoMassages',
-        component: RandoMassages
-    },
-    {
-        path: '/infos_pratiques',
-        name: 'InfosPratiques',
-        component: Infos
-    },
-    {
-        path: "/login",
-        name: "Login",
-        component: LoginComponent
-    },
-    {
-        path: "/formstage",
-        name: "FormStage",
-        component: FormStageComponent,
-        // meta: {
-        //     requiresAuth: true
-        //   },
+        path: '/:lang',    
+        component: {
+            render(c) { return c('router-view') }
+        },
+        children: [
+            {
+                path: '/',
+                name: 'Accueil',
+                component: Home
+            },
+            {
+                path: 'votre_masseuse',
+                name: 'Masseuse',
+                component: Masseuse
+            },
+            {
+                path: 'massages',
+                name: 'Massages',
+                component: Massages
+            },
+            {
+                path: 'stages',
+                name: 'Stages',
+                component: Stages
+            },
+            {
+                path: 'entreprises',
+                name: 'Entreprises',
+                component: Entreprises
+            },
+            {
+                path: 'rando_massages',
+                name: 'RandoMassages',
+                component: RandoMassages
+            },
+            {
+                path: 'infos_pratiques',
+                name: 'InfosPratiques',
+                component: Infos
+            },
+            {
+                path: "login",
+                name: "Login",
+                component: LoginComponent
+            },
+            {
+                path: "formstage",
+                name: "FormStage",
+                component: FormStageComponent,
+                // meta: {
+                //     requiresAuth: true
+                //   },
+            }
+        ]
     }
 ]
 
 const router = new VueRouter({
     mode: 'history',
-        routes
+    routes
 })
 
 export default router

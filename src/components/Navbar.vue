@@ -87,15 +87,19 @@
         <img src="../assets/img/Logo.svg" alt="logo" />
         <nav class="desktop_nav">
           <ul>
+            <!-- :to="`/${i18n.locale}/{name: item.name }`" -->
             <router-link
               class="li_nav"
               v-for="item in items"
               :key="item.name"
               :to="{ name: item.name }"
               :id="item.id"
-              >{{ item.tab }}</router-link
+              >{{$t(item.tab)}}</router-link
             >
+
+            <LanguageSwitcher />
           </ul>
+
           <div id="nav_wrap" class="flex">
             <div id="infos">
               <h3>Horaires</h3>
@@ -166,16 +170,18 @@
             />
           </svg>
         </div>
+
         <div id="burger_nav">
           <nav>
             <ul>
+              <LanguageSwitcher />
               <router-link
                 class="li_nav"
                 v-for="item in items"
                 :key="item.name"
                 :to="{ name: item.name }"
                 :id="item.id"
-                >{{ item.name }}</router-link
+                >{{$t(item.tab)}}</router-link
               >
             </ul>
           </nav>
@@ -187,8 +193,13 @@
 </template>
 
 <script>
+import i18n from "../i18n";
+import LanguageSwitcher from "@/components/LanguageSwitcher.vue";
 export default {
   name: "Navbar",
+  components: {
+    LanguageSwitcher,
+  },
   mounted() {
     /* ------------ Burger animation ------------ */
     let count = 0;
@@ -240,6 +251,8 @@ export default {
   },
   data: () => {
     return {
+      i18n,
+      langs: ["fr", "en"],
       items: [
         { name: "Accueil", tab: "Accueil", id: "acceuil" },
         { name: "Masseuse", tab: "Votre Masseuse", id: "votre_masseuse" },
@@ -247,7 +260,11 @@ export default {
         { name: "Stages", tab: "Stages", id: "stages" },
         { name: "Entreprises", tab: "Entreprises", id: "entreprises" },
         { name: "RandoMassages", tab: "Rando Massages", id: "rando_massages" },
-        { name: "InfosPratiques", tab: "Infos Pratiques", id: "infos_pratiques" },
+        {
+          name: "InfosPratiques",
+          tab: "Infos Pratiques",
+          id: "infos_pratiques",
+        },
       ],
     };
   },
